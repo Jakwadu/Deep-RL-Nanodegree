@@ -17,11 +17,3 @@ class StateBasedQNetwork(nn.Module):
         x = F.relu(self.fc2(x))
         x = F.relu(self.fc3(x))
         return self.fc4(x)
-    
-class PixelBasedQNetwork(nn.Module):
-    def __init__(self, input_shape=(84,84,3)):
-        super(PixelBasedQNetwork, self).__init__()
-        ...
-        
-    def forward(self, x_in):
-        ...
