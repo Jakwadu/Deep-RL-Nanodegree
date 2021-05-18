@@ -1,6 +1,12 @@
 # Project 1: Navigation
 
-This is a solution to Project 1 of the Udacity Deep Reinfocement Learning Nanodegree. The project specification can be found [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation). `BananaAgent.py` and `model.py` are based on Deep Q Network excercise found [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/dqn). The main script is run from `run.py` and can be executed with the following options:
+This is a solution to Project 1 of the Udacity Deep Reinfocement Learning Nanodegree. The project specification can be found [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation). `BananaAgent.py` and `model.py` are based on Deep Q Network excercise found [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/dqn). The project dependencies can be found in `requirements.txt` and can be installed with the command:
+
+```
+python -m pip install -r requirements.txt
+```
+
+The main script is run from `run.py` and can be executed with the following options:
 
 `--evaluate` - Run the model with pretrained weights.
 
