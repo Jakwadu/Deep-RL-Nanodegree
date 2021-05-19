@@ -53,6 +53,7 @@ def train(max_episodes=MAX_EPISODES, epsilon=EPSILON):
 
     environment_solved = False
     t = trange(max_episodes, desc='Running mean score: {:.3f}'.format(running_mean_100))
+    pass_criterion_counter = 0
     
     for _ in t:
         score = run_episode(env, epsilon)
@@ -63,9 +64,16 @@ def train(max_episodes=MAX_EPISODES, epsilon=EPSILON):
             running_mean_100 = np.mean(training_scores[-100:])
         running_mean_scores.append(running_mean_100)
         t.set_description('Running mean score: {:.3f} | Epsilon: {:.3f}'.format(running_mean_100, epsilon))
+
         if running_mean_100 >= 13.0:
-            environment_solved = True
-            break
+            pass_criterion_counter += 1
+            # Check that running meas is greater than 13 for 100 consecutive episodes
+            if pass_criterion_counter >= 100:
+                environment_solved = True
+                break
+        else:
+            pass_criterion_counter = 0
+        
         if epsilon > 0.01:
             epsilon *= EPSILON_DECAY
 
