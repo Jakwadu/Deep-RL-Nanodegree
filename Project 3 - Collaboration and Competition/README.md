@@ -14,6 +14,6 @@ Python installation prerequisites can be installed using pip:
 python -m pip install -r requirements.txt
 ```
 
-*Note: run.py assumes that the Tennis environment root directory is in the same place as the training script (eg. './Tennis_Windows_x86_64/Reacher.exe')*
+*Note: run.py assumes that the Tennis environment root directory is in the same place as the training script (eg. './Tennis_Windows_x86_64/Tennis.exe')*
 
 
